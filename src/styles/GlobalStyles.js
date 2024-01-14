@@ -1,5 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import { FONTS } from './fonts';
+import { COLORS } from './colors';
+// import backgroundImage from '/public/assets/background-stars.svg';
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -18,8 +20,10 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${FONTS.bodyFont};
     font-weight: 500;
     font-size: 14px;
-	  line-height: 25px;
-
+	  line-height: 25px;   
+    background-color: black;
+    background-image: url('/assets/background-stars.svg') ;
+   
   }
 
   a{
@@ -41,6 +45,7 @@ export const StyledH1 = styled.h1`
 	font-family: ${FONTS.h1Font};
 	font-size: 80px;
 	line-height: 103px;
+	color: ${COLORS.textColor};
 `;
 
 export const StyledH2 = styled.h2`
@@ -48,6 +53,7 @@ export const StyledH2 = styled.h2`
 	font-size: 40px;
 	line-height: 52px;
 	letter-spacing: -1.5px;
+	color: ${COLORS.textColor};
 `;
 
 export const StyledH3 = styled.h3`
@@ -56,6 +62,7 @@ export const StyledH3 = styled.h3`
 	font-size: 12px;
 	line-height: 25px;
 	letter-spacing: 2.6px;
+	color: ${COLORS.textColor};
 `;
 
 export const StyledH4 = styled.h4`
@@ -64,4 +71,5 @@ export const StyledH4 = styled.h4`
 	font-size: 11px;
 	line-height: 25px;
 	letter-spacing: 1px;
+	color: ${COLORS.textColor};
 `;

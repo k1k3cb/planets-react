@@ -1,13 +1,16 @@
-import { BrowserRouter } from "react-router-dom";
-import Router from "./router/Router";
+import { BrowserRouter } from 'react-router-dom';
+import Router from './router/Router';
+import { GlobalStyles } from './styles/GlobalStyles';
 
 const App = () => {
-
-
-
-	return <BrowserRouter>
-	<Router/>
-	</BrowserRouter>;
+	return (
+		<>
+			<GlobalStyles />
+			<BrowserRouter>
+				<Router />
+			</BrowserRouter>
+		</>
+	);
 };
 
 export default App;

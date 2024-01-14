@@ -1,5 +1,4 @@
 export const COLORS = {
-	// primary: '#070724',
 	backgroundColor: '#070724',
 	textColor: '#FFFFFF',
 	textColorTitle: '#838391',
@@ -10,5 +9,6 @@ export const COLORS = {
 	jupiter: '#D83A34',
 	saturn: '#CD5120',
 	uranus: '#1ec2a4',
-	neptune: '#2d68f0'
+	neptune: '#2d68f0',
+	hover: '#D8D8D8'
 };
