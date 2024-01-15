@@ -3,10 +3,9 @@ import { StyledH1 } from '../../styles/GlobalStyles';
 import { COLORS } from '../../styles/colors';
 
 export const StyledMainContainer = styled.main`
-	max-width: 1040px;
+	max-width: 1115px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50px;
 `;
 
 export const StyledContainerFlex = styled.div`

@@ -36,7 +36,12 @@ const Main = ({ planet }) => {
 					<Tabs backgroundColor={planet.color} />
 				</StyledContentDiv>
 			</StyledContainerFlex>
-			<Footer />
+			<Footer
+				rotationTime={planet.rotationTime}
+				revolutionTime={planet.revolutionTime}
+				radius={planet.radius}
+				averageTemp={planet.averageTemp}
+			/>
 		</StyledMainContainer>
 	);
 };
