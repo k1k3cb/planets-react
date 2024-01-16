@@ -10,5 +10,5 @@ export const COLORS = {
 	saturn: '#CD5120',
 	uranus: '#1ec2a4',
 	neptune: '#2d68f0',
-	hover: '#D8D8D8'
+	hover: '#38384f'
 };

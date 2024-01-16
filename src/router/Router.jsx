@@ -1,11 +1,17 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Planet from '../pages/Planet';
+import { MENU } from '../constants/menu';
 
 const Router = () => {
 	return (
 		<Routes>
-			<Route path='/:planetName' element={<Planet />} />
-			<Route path='/*' element={<Navigate to='/mercury' />} />
+			{MENU.map(itemNav => (
+				<Route
+					key={itemNav.id}
+					path={itemNav.menuPath}
+					element={<Planet planetName={itemNav.text} />}
+				/>
+			))}
 		</Routes>
 	);
 };

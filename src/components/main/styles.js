@@ -20,6 +20,7 @@ export const StyledImgDiv = styled.div`
 
 export const StyledContentDiv = styled.div`
 	flex: 40%;
+	min-height: 700px;
 `;
 
 export const StyledPlanetName = styled(StyledH1)`
@@ -56,4 +57,21 @@ export const StyledSourceText = styled.p`
 export const StyledSourceSpan = styled.span`
 	opacity: 0.5;
 	margin-right: 5px;
+`;
+
+export const StyledImgContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+`;
+
+export const StyledImgRelative = styled.img`
+	/* position: relative; */
+`;
+
+export const StyledImgAbsolute = styled.img`
+	position: absolute;
+	max-width: 60%;
+	bottom: -100px;
 `;

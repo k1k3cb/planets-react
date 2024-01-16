@@ -1,38 +1,36 @@
-import { PLANETS } from '../../constants/planets';
+
 import {
 	StyledHeader,
+	StyledLink,
 	StyledLogo,
 	StyledNav,
 	StyledNavDiv,
 	StyledNavItem,
 	StyledNavUl
 } from './styles';
+import { MENU } from '../../constants/menu';
 
-const Header = ({ setPlanet }) => {
+const Header = () => {
 	return (
 		<StyledHeader>
 			<StyledLogo>THE PLANETS</StyledLogo>
 			<StyledNavDiv>
 				<StyledNav>
 					<StyledNavUl>
-						{PLANETS.map(planet => (
-							<StyledNavItem
-								key={planet.id}
-								$borderColor={planet.color}
-								onClick={() => handlePlanetClick(planet, setPlanet)}
-							>
-								{planet.name}{' '}
-							</StyledNavItem>
-						))}
+						{MENU.map(menuItem => {
+							return (
+								<StyledNavItem key={menuItem.id} $borderColor={menuItem.color}>
+									<StyledLink to={menuItem.menuPath}>
+										{menuItem.text}
+									</StyledLink>
+								</StyledNavItem>
+							);
+						})}
 					</StyledNavUl>
 				</StyledNav>
 			</StyledNavDiv>
 		</StyledHeader>
 	);
-};
-
-const handlePlanetClick = (planet, setPlanet) => {
-	setPlanet(planet);
 };
 
 export default Header;

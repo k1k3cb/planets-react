@@ -15,12 +15,11 @@ export const StyledButton = styled.button`
 	color: ${COLORS.textColor};
 	border: 1px solid ${COLORS.textColorTitle};
 	background-color: ${({ $active, $backgroundColor }) =>
-		$active ? { $backgroundColor } : 'transparent'};
+		$active ? $backgroundColor : 'transparent'};
 	margin-bottom: 18px;
 	cursor: pointer;
 	&:hover {
-		background-color: ${COLORS.hover};
-		opacity: 0.2;
+		background-color: ${({ $active }) => !$active && COLORS.hover};
 	}
 `;
 

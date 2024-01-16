@@ -6,7 +6,7 @@ const Footer = ({ rotationTime, revolutionTime, radius, averageTemp }) => {
 		<StyledContainer>
 			<FooterBtn text='ROTATION TIME' data={rotationTime} />
 			<FooterBtn text='REVOLUTION TIME' data={revolutionTime} />
-			<FooterBtn text='radius' data={radius} />
+			<FooterBtn text='RADIUS' data={radius} />
 			<FooterBtn text='AVERAGE TEMP.' data={averageTemp} />
 		</StyledContainer>
 	);

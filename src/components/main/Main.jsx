@@ -3,7 +3,10 @@ import Footer from '../footer/Footer';
 import {
 	StyledContainerFlex,
 	StyledContentDiv,
+	StyledImgAbsolute,
+	StyledImgContainer,
 	StyledImgDiv,
+	StyledImgRelative,
 	StyledMainContainer,
 	StyledPlanetName,
 	StyledSourceDiv,
@@ -12,35 +15,61 @@ import {
 	StyledText
 } from './styles';
 import Tabs from '../tabs/Tabs';
+import { PLANETS } from '../../constants/planets';
+import { useState } from 'react';
 
 const Main = ({ planet }) => {
-	// console.log(planet);
+	const [activeTab, setActiveTab] = useState(0);
+	// console.log(PLANETS[planet]);
+
 	return (
 		<StyledMainContainer>
 			<StyledContainerFlex>
 				<StyledImgDiv>
-					<img src={planet.planetImg} alt={planet.name} />
+					{activeTab === 2 && (
+						<StyledImgContainer>
+							<StyledImgRelative
+								src={PLANETS[planet].images[1]}
+								alt={`${PLANETS[planet].name} - Image 2`}
+							/>
+							<StyledImgAbsolute
+								src={PLANETS[planet].images[activeTab]}
+								alt={`${PLANETS[planet].name} - Image 3`}
+							/>
+						</StyledImgContainer>
+					)}
+
+					{activeTab !== 2 && (
+						<img
+							src={PLANETS[planet].images[activeTab]}
+							alt={`${PLANETS[planet].name} - Image ${activeTab}`}
+						/>
+					)}
 				</StyledImgDiv>
 
 				<StyledContentDiv>
-					<StyledPlanetName>{planet.name}</StyledPlanetName>
-					<StyledText>{planet.overview}</StyledText>
+					<StyledPlanetName>{PLANETS[planet].name}</StyledPlanetName>
+					<StyledText>{}</StyledText>
 					<StyledSourceDiv>
 						<StyledSourceText>
-							<StyledSourceSpan>Source: </StyledSourceSpan> Wikipedia{' '}
+							<StyledSourceSpan>Source: </StyledSourceSpan> Wikipedia
 						</StyledSourceText>
-						<Link to={planet.wikipedia}>
+						<Link to={PLANETS[planet].wikipedia}>
 							<img src='assets/icon-source.svg' alt='' />
 						</Link>
 					</StyledSourceDiv>
-					<Tabs backgroundColor={planet.color} />
+					<Tabs
+						backgroundColor={PLANETS[planet].color}
+						activeTab={activeTab}
+						setActiveTab={setActiveTab}
+					/>
 				</StyledContentDiv>
 			</StyledContainerFlex>
 			<Footer
-				rotationTime={planet.rotationTime}
-				revolutionTime={planet.revolutionTime}
-				radius={planet.radius}
-				averageTemp={planet.averageTemp}
+				rotationTime={PLANETS[planet].rotationTime}
+				revolutionTime={PLANETS[planet].revolutionTime}
+				radius={PLANETS[planet].radius}
+				averageTemp={PLANETS[planet].averageTemp}
 			/>
 		</StyledMainContainer>
 	);

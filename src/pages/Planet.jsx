@@ -1,15 +1,11 @@
-import { useState } from 'react';
 import Header from '../components/header/Header';
 import Main from '../components/main/Main';
-import { PLANETS } from '../constants/planets';
 
-const Planet = () => {
-	const [planet, setPlanet] = useState(PLANETS[0]);
-
+const Planet = ({ planetName }) => {
 	return (
 		<>
-			<Header setPlanet={setPlanet} />
-			<Main planet={planet} />
+			<Header />
+			<Main planet={planetName} />
 		</>
 	);
 };
