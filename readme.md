@@ -1,6 +1,6 @@
 # The Planets
 
-![Imagen del proyecto](https://raw.githubusercontent.com/k1k3cb/video-games-api/main/public/assets/images/img1.webp)
+![Imagen del proyecto](https://raw.githubusercontent.com/k1k3cb/planets-react/main/public/assets/github/planet%2000.webp)
 
 ## Ejemplo en vivo
  
@@ -42,7 +42,9 @@ Web con la información y características de los planetas del sistema solar
 
 Si quieres echar un vistazo al proyecto, te recomiendo:
 
-![Captura del proyecto](https://raw.githubusercontent.com/k1k3cb/video-games-api/main/public/assets/images/img2.webp)
+![Captura del proyecto](https://raw.githubusercontent.com/k1k3cb/planets-react/main/public/assets/github/planet%2001.webp)
+
+![Captura del proyecto](https://raw.githubusercontent.com/k1k3cb/planets-react/main/public/assets/github/planet%2002.webp)
 
 
 
